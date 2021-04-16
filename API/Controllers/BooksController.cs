@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using API.Dtos;
+using AutoMapper;
 using Core.Entities;
 using Core.Interfaces;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
@@ -12,14 +11,16 @@ namespace API.Controllers
     public class BooksController : BaseApiController
     {
         private readonly IBookRepository _bookRepo;
+        private readonly IMapper _mapper;
 
-        public BooksController(IBookRepository bookRepo)
+        public BooksController(IBookRepository bookRepo, IMapper mapper)
         {
             _bookRepo = bookRepo;
+            _mapper = mapper;
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult> GetBook(int id)
+        public async Task<ActionResult<BookToReturnDto>> GetBook(int id)
         {
             var book = await _bookRepo.GetBookWithAuthor(id);
 
@@ -28,15 +29,17 @@ namespace API.Controllers
                 return NotFound();
             }
 
-            return Ok(book);
+            return _mapper.Map<Book, BookToReturnDto>(book);
         }
 
         [HttpGet]
-        public async Task<ActionResult<IReadOnlyList<Book>>> GetBooks()
+        public async Task<ActionResult<IReadOnlyList<BookToReturnDto>>> GetBooks()
         {
             var books = await _bookRepo.GetBooksWithAuthors();
 
-            return Ok(books);
+            var data = _mapper.Map<IReadOnlyList<Book>, IReadOnlyList<BookToReturnDto>>(books);
+
+            return Ok(data);
         }
     }
 }

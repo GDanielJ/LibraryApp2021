@@ -1,0 +1,38 @@
+[
+  {
+    "Firstname": "Miguel",
+    "Lastname": "de Cervantes"
+  },
+  {
+    "Firstname": "Fyodor",
+    "Lastname": "Dostoevsky"
+  },
+  {
+    "Firstname": "Ernest",
+    "Lastname": "Hemingway"
+  },
+  {
+    "Firstname": "",
+    "Lastname": "Homer"
+  },
+  {
+    "Firstname": "George",
+    "Lastname": "Orwell"
+  },
+  {
+    "Firstname": "Marcel",
+    "Lastname": "Proust"
+  },
+  {
+    "Firstname": "William",
+    "Lastname": "Shakespeare"
+  },
+  {
+    "Firstname": "Leo",
+    "Lastname": "Tolstoy"
+  },
+  {
+    "Firstname": "Mark",
+    "Lastname": "Twain"
+  }
+]

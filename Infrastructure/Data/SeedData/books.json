@@ -1,0 +1,80 @@
+[
+  {
+    "ISBN": "9789188155160",
+    "Name": "Don Quijote De La Mancha",
+    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "AuthorId": 1
+  },
+  {
+    "ISBN": "0140449132",
+    "Name": "Crime and Punishment",
+    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "AuthorId": 2
+  },
+  {
+    "ISBN": "9781781396803",
+    "Name": "The Old Man and the Sea",
+    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "AuthorId": 3
+  },
+  {
+    "ISBN": "9780140275360",
+    "Name": "Iliad",
+    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "AuthorId": 4
+  },
+  {
+    "ISBN": "9780140268867",
+    "Name": "Odyssey",
+    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "AuthorId": 4
+  },
+  {
+    "ISBN": "9780141036144",
+    "Name": "Nineteen Eighty-Four",
+    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "AuthorId": 5
+  },
+  {
+    "ISBN": "9780141180311",
+    "Name": "In Search of Lost Time",
+    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "AuthorId": 6
+  },
+  {
+    "ISBN": "9780743477123",
+    "Name": "Hamlet",
+    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "AuthorId": 7
+  },
+  {
+    "ISBN": "9780451526939",
+    "Name": "King Lear",
+    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "AuthorId": 7
+  },
+  {
+    "ISBN": "9789170379680",
+    "Name": "Othello",
+    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "AuthorId": 7
+  },
+  {
+    "ISBN": "9781853260629",
+    "Name": "War and Peace",
+    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "AuthorId": 8
+  },
+  {
+    "ISBN": "9781607108153",
+    "Name": "Anna Karenina",
+    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "AuthorId": 8
+  },
+  {
+    "ISBN": "9781847496027",
+    "Name": "The Adventures of Huckleberry Finn",
+    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "AuthorId": 9
+  }
+]

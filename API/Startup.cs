@@ -16,6 +16,8 @@ using Microsoft.Extensions.Hosting;
 using AutoMapper;
 using Microsoft.Extensions.Logging;
 using API.Helpers;
+using Infrastructure.Identity;
+using API.Extensions;
 
 namespace API
 {
@@ -34,6 +36,9 @@ namespace API
             services.AddAutoMapper(typeof(MappingProfiles));
             services.AddControllers();
             services.AddDbContext<LibraryContext>(options => options.UseSqlServer(_config.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<LibraryIdentityDbContext>(options => options.UseSqlServer(_config.GetConnectionString("IdentityConnection")));
+
+            services.AddIdentityServices();
 
             services.AddScoped<IBookRepository, BookRepository>();
         }

@@ -40,5 +40,41 @@ namespace API.Controllers
                 Token = "" // TODO - Implementera tokens
             };
         }
+
+        [HttpPost("register")]
+        public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto)
+        {
+            if (CheckEmailExistsAsync(registerDto.Email).Result.Value)
+            {
+                return BadRequest("Email is in use");
+            }
+
+            var user = new AppUser
+            {
+                DisplayName = registerDto.DisplayName,
+                Email = registerDto.Email,
+                UserName = registerDto.Email
+            };
+
+            var result = await _userManager.CreateAsync(user, registerDto.Password);
+
+            if (!result.Succeeded)
+            {
+                return BadRequest("Error creating user");
+            }
+
+            return new UserDto
+            {
+                DisplayName = user.DisplayName,
+                Token = "", // TODO - Implementera tokens
+                Email = user.Email
+            };
+        }
+
+        [HttpGet("emailexists")]
+        public async Task<ActionResult<bool>> CheckEmailExistsAsync([FromQuery] string email)
+        {
+            return await _userManager.FindByEmailAsync(email) != null;
+        }
     }
 }

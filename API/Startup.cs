@@ -18,6 +18,7 @@ using Microsoft.Extensions.Logging;
 using API.Helpers;
 using Infrastructure.Identity;
 using API.Extensions;
+using Infrastructure.Services;
 
 namespace API
 {
@@ -38,8 +39,9 @@ namespace API
             services.AddDbContext<LibraryContext>(options => options.UseSqlServer(_config.GetConnectionString("DefaultConnection")));
             services.AddDbContext<LibraryIdentityDbContext>(options => options.UseSqlServer(_config.GetConnectionString("IdentityConnection")));
 
-            services.AddIdentityServices();
+            services.AddIdentityServices(_config);
 
+            services.AddScoped<ITokenService, TokenService>();
             services.AddScoped<IBookRepository, BookRepository>();
         }
 
@@ -55,6 +57,7 @@ namespace API
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

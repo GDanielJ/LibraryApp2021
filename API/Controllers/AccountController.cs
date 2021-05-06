@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
+using Core.Interfaces;
 
 namespace API.Controllers
 {
@@ -15,11 +16,13 @@ namespace API.Controllers
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
+        private readonly ITokenService _tokenService;
 
-        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
+        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, ITokenService tokenService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _tokenService = tokenService;
         }
 
         [HttpGet("login")]
@@ -37,7 +40,7 @@ namespace API.Controllers
             {
                 Email = user.Email,
                 DisplayName = user.DisplayName,
-                Token = "" // TODO - Implementera tokens
+                Token = _tokenService.CreateToken(user)
             };
         }
 
@@ -66,7 +69,7 @@ namespace API.Controllers
             return new UserDto
             {
                 DisplayName = user.DisplayName,
-                Token = "", // TODO - Implementera tokens
+                Token = _tokenService.CreateToken(user),
                 Email = user.Email
             };
         }
